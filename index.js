@@ -4,6 +4,7 @@ const connectDB = require('./config/db');
 const jobRoutes = require('./routes/jobRoutes');
 const userRoutes = require('./routes/UserRoutes');
 const applicationRoutes = require('./routes/ApplicationRoutes');
+const companyRoutes = require ('./routes/CompanyRoutes');
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use('/api', jobRoutes);
 app.use('/api', userRoutes);
 app.use('/api', applicationRoutes);
+app.use('/api', companyRoutes);
 
 const PORT = process.env.PORT || 5000;
 
